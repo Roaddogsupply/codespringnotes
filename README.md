@@ -1,6 +1,6 @@
-# CodeSpring Boilerplate
+# Simple Note Taker
 
-A modern full-stack starter built with Next.js 14, Tailwind CSS, ShadCN UI, Supabase, Drizzle ORM, Clerk authentication and Stripe payments.
+A lightweight notes app UI built with Next.js 14, Tailwind CSS, and ShadCN UI.
 
 ---
 
@@ -25,8 +25,8 @@ If you get stuck or spot an issue, reach out at **usecodespring@gmail.com** – 
 
 ---
 
-## Why CodeSpring Boilerplate?
-CodeSpring Boilerplate gives you everything you need to launch a production-ready SaaS or internal tool:
+## Overview
+Simple Note Taker focuses on a clean dashboard for listing, searching, and filtering notes with smooth UI interactions.
 
 - 📦 **Batteries included** – Auth, payments, database & UI are pre-wired.
 - 🖌 **Beautiful UI** – ShadCN + Tailwind ensures design consistency.
@@ -40,9 +40,9 @@ CodeSpring Boilerplate gives you everything you need to launch a production-read
 |-------|------------|
 | **Frontend** | Next.js 14 (App Router, React Server Components) |
 | **Styling** | Tailwind CSS, ShadCN UI, Framer Motion |
-| **Backend** | Supabase (PostgreSQL) with Drizzle ORM |
-| **Auth** | Clerk |
-| **Payments** | Stripe |
+| **Backend (planned)** | Supabase (PostgreSQL) with Drizzle ORM |
+| **Auth (planned)** | Clerk |
+| **Payments (planned)** | Stripe |
 | **Deployment** | Vercel |
 
 ---
@@ -67,22 +67,7 @@ Before you begin make sure you have:
 ---
 
 ## Getting Started
-### 1. Clone & Detach From This Repository
-```bash
-# Clone the boilerplate (creates a new folder "codespring-boilerplate")
-git clone https://github.com/CodeSpringHQ/codespring-boilerplate.git
-cd codespring-boilerplate
-
-# Remove the existing Git remote so you can connect your own repo
-git remote remove origin
-
-# Create a brand-new repository on GitHub (via web UI or gh CLI) then add it:
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-
-git push -u origin main
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 We use **npm** by default – feel free to swap for **pnpm** or **yarn**.
 ```bash
 # Make sure you are using Node ≥ 18
@@ -92,7 +77,7 @@ node -v
 npm install
 ```
 
-### 3. Configure Environment Variables
+### 2. Configure Environment Variables (for full integration later)
 Copy the example file and fill in the blanks:
 ```bash
 cp .env.example .env.local
@@ -119,7 +104,7 @@ NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY="https://buy.stripe.com/..."
 
 > Keep `.env.local` **private** – never commit it to Git!
 
-### 4. Run Locally
+### 3. Run Locally
 ```bash
 npm run dev
 # Visit http://localhost:3000
@@ -128,7 +113,7 @@ npm run dev
 ---
 
 ## Deployment
-1. Push your code to GitHub (see step 1).
+1. Push your code to GitHub.
 2. Log into [Vercel](https://vercel.com/) and **Import Project**.
 3. During setup, add the same environment variables from `.env.local` to Vercel.
 4. Click **Deploy** – Vercel will build and deploy your app.
